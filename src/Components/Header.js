@@ -1,5 +1,5 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
+//import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -11,14 +11,19 @@ import Container from '@mui/material/Container';
 //import Button from '@mui/material/Button';
 //import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+//import AdbIcon from '@mui/icons-material/Adb';
 
+
+//  Icon Mui 
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 // import img
 import logoJD from "../assets/logo.jpg"
-import map from "../assets/map.jpg"
-import wpp from "../assets/wpp.png"
-import insta from "../assets/insta.webp"
+//import map from "../assets/map.jpg"
+//import wpp from "../assets/wpp.png"
+//import insta from "../assets/insta.webp"
 //import { width } from '@mui/system';
 
 const urlMap = "https://www.google.com.ar/maps/place/Baterias+Fc+Moura/@-31.3834026,-64.2220732,20.13z/data=!4m6!3m5!1s0x943299a54f30924b:0xbc450c7eb83988b7!8m2!3d-31.3833615!4d-64.2219606!16s%2Fg%2F11j6t2ngl8"
@@ -54,7 +59,7 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl" >
         <Toolbar disableGutters >
         {/**  <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color:"rebeccapurple" }} />   Icono modo Pantalla completa  */}
-        <a href='https://www.instagram.com/p/CWBSGZBJcec/' target="_blank" rel="noopener" ><img src={logoJD} alt="logo" className='logo'/></a>
+        <a href='https://www.instagram.com/p/CWBSGZBJcec/' rel="noopener" ><img src={logoJD} alt="logo" className='logo'/></a>
         
        
          <div className='container-title' >
@@ -94,15 +99,15 @@ function ResponsiveAppBar() {
             >     
                   
                 <MenuItem   >{/** wpp */}
-                  <Typography textAlign="center" className='nav' ><a href='https://api.whatsapp.com/send?phone=3512364375&text=hola' ><img src={wpp} /></a></Typography>  {/** Lo que contiene el menu de hambur */}
+                  <Typography textAlign="center" className='nav' ><a href='https://api.whatsapp.com/send?phone=3512364375&text=hola' ><WhatsAppIcon sx={{ fontSize: 30 }} className='wpp'/></a></Typography>  {/** Lo que contiene el menu de hambur */}
                 </MenuItem>
                 
                 <MenuItem>{/** Insta */}
-                  <Typography textAlign="center" className='nav' ><a href='https://www.instagram.com/cba_jdetail/' ><img src={insta} /></a></Typography>  {/** Lo que contiene el menu de hambur Movil */}
+                  <Typography textAlign="center" className='nav' ><a href='https://www.instagram.com/cba_jdetail/' ><InstagramIcon  sx={{ fontSize: 30 }} className='insta' /></a></Typography>  {/** Lo que contiene el menu de hambur Movil */}
                 </MenuItem>
                 
                 <MenuItem > {/** MAP */}
-                  <Typography textAlign="center" className='nav' ><a href={urlMap} ><img src={map} /></a></Typography>  {/** Lo que contiene el menu de hambur Movil */}
+                  <Typography textAlign="center" className='nav' ><a href={urlMap} ><LocationOnIcon   sx={{ fontSize: 30 }} className='map'/></a></Typography>  {/** Lo que contiene el menu de hambur Movil */}
                 </MenuItem>
            
             </Menu>
@@ -117,8 +122,8 @@ function ResponsiveAppBar() {
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
+              flexGrow: 0.5,
+              fontFamily: 'Courier New',
               fontWeight: 800,
               letterSpacing: '.3rem',
               textDecoration: 'none',
@@ -129,9 +134,10 @@ function ResponsiveAppBar() {
             CBA JD    {/** Letra titulo MOVIL */}
           </Typography>
           <Box className="redSocial">
-            <a href='https://api.whatsapp.com/send?phone=3513175522&text=Hola, Quiero un Turno'><img src={wpp} /></a>
-            <a href='https://www.instagram.com/cba_jdetail/'><img src={insta}/></a>
-            <a href={urlMap}><img src={map} /></a>
+            <a href='https://api.whatsapp.com/send?phone=3513175522&text=Hola, Quiero un Turno'><WhatsAppIcon sx={{ fontSize: 45 }} className='wppNav'/></a>
+            <a href='https://www.instagram.com/cba_jdetail/'><InstagramIcon className='insta'  sx={{ fontSize: 45 }}/></a>
+            <a href={urlMap}><LocationOnIcon   sx={{ fontSize: 40 }} className='mapWeb'/></a>
+          
           </Box>
           
      

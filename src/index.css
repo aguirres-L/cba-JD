@@ -33,7 +33,7 @@ code {
 }
 
 .title{
-  font-family: sans-serif;
+  font-family:'Courier New', Courier, monospace;
   color: white;
   font-size: 55px;
 }
@@ -47,7 +47,9 @@ margin-left: 90%;
 
 
 
-
+.divRed{
+  background-color: rgb(148, 7, 7);
+}
 
 
 
@@ -99,6 +101,7 @@ border: solid rebeccapurple 2px;
 
 .red{
   background-color: black;
+  box-shadow: 0px 0px 20px black;
 }
 
 /* cabezera Mobile*/
@@ -110,7 +113,7 @@ border: solid rebeccapurple 2px;
 
 /*  CARD   */
 .container-card{
-  margin-top: 1rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,32 +145,40 @@ background-color: black;
   /*   btn */
   
   .btn{
-    background-color: rgb(50, 180, 255);
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    font-size: 25px;
+   /* background-color: rgb(50, 180, 255);*/
+    background-color: transparent;
+    color: gray;
+    opacity: .3;
+    border: solid 2px transparent;
+    transition: all .2s;
+    
+    
   }
-  .btn.L{
-    text-align: left;
-  
-  }
-  .bnt.R{
-  text-align: right;
-  }
-  .btn:hover{
-  box-shadow: 0px 0px 20px rgb(50, 180, 255);
+ .btn:hover{
+ transition: all .3s;
   color: white;
+  opacity: 1;
+  font-size: 70px;
+ }
+ 
+ 
+ .btn.L{
+  z-index: 999;
+  position: absolute;
+  margin-left: 50px;
+ }
+ .btn.R{
+  position: absolute;
+  margin-left:520px;
   }
   
+
+ 
+ 
   .card-container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: black;
-    box-shadow: 0px 0px 15px rgb(50, 180, 255);
-    border: solid white 2px;
-    
   }
   
   .card-container video{
@@ -190,8 +201,52 @@ text-align: center;
 margin-top: 20px;
 font-family: sans-serif;
 font-size: x-large;
-  margin-left: 10%;
+color: white;
 }
+
+
+/*  ICON mui */
+
+.map{
+border-radius: 50%;
+  color: rgb(63, 124, 255);
+  border-top: .2px solid #EA4335;
+  border-right: .2px solid #4285F4;
+  border-bottom: .2px solid #34A853;
+  border-left:.2px solid #FBBC05;
+  border-radius: 50%;
+}
+
+.mapWeb{
+  border-radius: 50%;
+    color: rgb(63, 124, 255);
+    border-top: 5px solid #EA4335;
+    border-right: 5px solid #4285F4;
+    border-bottom: 5px solid #34A853;
+    border-left:5px solid #FBBC05;
+    border-radius: 50%;
+    
+  
+  }
+
+
+.insta{
+color: white;
+
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  border-radius: 40%;
+}
+.wpp{
+  color: green;
+}
+.wpp:hover{
+  color: green;
+}
+
 
 
 
@@ -211,14 +266,16 @@ font-size: x-large;
     }
     
   .card-container{
-    box-shadow: 0px 0px 20px rgb(50, 180, 255);
+    box-shadow: 0px 0px 25px rgb(0, 0, 0);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 300px;
     border-radius: 5px;
-  }
+    background-color: rgb(11, 11, 11);
+    
+    }
 .card-container video{
   height: 100%;
   width: 100%;
@@ -264,13 +321,117 @@ font-size: x-large;
     width: auto;
   }
   .btn{
-    background-color: rgb(50, 180, 255);
-    width: 26px;
-    height: 25px;
-    font-size: 10px;
+    background-color: transparent;
+    color: rgb(144, 19, 19);
+    opacity: .4;
+    border: solid 2px transparent;
+    transition: all .2s;
   }
- 
+
+  .btn.L{
+    z-index: 999;
+    margin-right: 79%;
+   }
+   .btn.R{
+   position: absolute;
+   margin-right: 60%;
+   }
+   
+   .btn:hover{
+      color: rgb(144, 19, 19);
+   opacity: .8;
+  font-size: 42px;
+   
+    }
+  .figcaption-slider{
+    font-size: 18px;
+    
+  }        
+  }
+
+
+
   
+  .css-i4bv87-MuiSvgIcon-root{
+    width: 2em;
+  }
+  .wppNav{
+   color: green;
 
   }
   
+    
+  
+  
+  @media screen and (max-width: 450px){
+  
+    .btn.L{
+      margin-right: 78%;
+     }
+     .btn.R{
+     margin-right: 60%;
+     }
+     .btn:hover{
+          color: rgb(144, 19, 19);
+      opacity: .8;
+  font-size: 42px;
+      
+       }
+  }
+  
+  @media screen and (max-width: 400px){
+  
+    .btn.L{
+      margin-right: 82%;
+     }
+     .btn.R{
+     margin-right: 63%;
+     }
+     
+     .btn:hover{
+    color: rgb(144, 19, 19);
+      opacity: .8;
+  font-size: 42px;
+      
+       } 
+    }
+
+
+
+
+
+  @media screen and (max-width: 390px){
+    .btn:hover{
+          color: rgb(144, 19, 19);
+      opacity: .8;
+       }
+    .btn.L{
+      margin-right: 90%;
+     }
+     .btn.R{
+     margin-right: 69%;
+     }
+  }
+
+
+
+
+
+
+/* Estilo Cards Servi */
+
+
+
+  /*
+   Ver apra logos pag comleta 
+  
+ border-top: 100px solid #EA4335;
+  border-right: 100px solid #4285F4;
+  border-bottom: 100px solid #34A853;
+  border-left: 100px solid #FBBC05;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+
+
+  
+*/

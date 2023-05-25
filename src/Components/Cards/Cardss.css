@@ -1,0 +1,101 @@
+
+
+.title-card{
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-size: larger;
+    
+}
+
+.container-detalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container-detalle h3{
+        color:black;
+        margin-top: 0;
+        color:white
+}
+
+.container-detalle h3:hover{
+    color:white
+}
+.container-detalle a{
+    text-decoration: none;
+}
+
+
+.detail{
+    height: 265px;
+}
+.detail p{
+    text-align: left;
+    width: 400px;
+    font-size: 21px;
+    margin-left: 22%;
+    
+}
+
+.hrr{
+    color: red;
+    width: 100%;
+}
+
+.wppCard{
+
+    color: black;
+    font-size: 50px;
+    margin-top: -12px;
+}
+.wppCard:hover{
+    color: rgb(42, 160, 42);
+}
+
+@media screen and (max-width: 480px){
+    
+.title-card{
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-size: 20px;
+    
+}
+
+.detail p{
+    text-align: left;
+    width: 240px;
+    font-size: 16px;
+    margin-left: 10%;
+    
+}
+.container-detalle h3{
+    margin-top: -64px;
+    }
+    
+.hrr{
+    display: none;
+}
+
+
+
+.container-detalle h3{
+    color:white
+}
+
+.container-detalle h3:hover{
+    color:black;
+}
+    
+.wppCard{
+
+    color: black;
+    font-size: 50px;
+    position: absolute;
+    margin-top: -70px;
+    margin-left: -20px;
+}
+.wppCard:hover{
+    color: rgb(42, 160, 42);
+}
+
+}

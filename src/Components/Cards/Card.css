@@ -1,0 +1,107 @@
+
+.ser-vice{
+ /* border: solid red 2px;*/
+  display: grid;          /*  Al utilizar el displat "grid" me permite ordenar de otras formas las class de los elementos del dom*/
+  grid-template-columns: repeat(auto-fit,minmax(760px,1fr));
+}
+
+
+.card1-container {
+  position: relative;
+  width: 480px;
+  height: 430px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+ /* border: solid red 2px;*/
+  margin-bottom: 60px;
+  margin-left: 19%;
+  margin-top: 10%;
+}
+
+
+
+@media screen and (max-width: 800px){
+  .card1-container{
+    width: 260px;
+    height: 280px;
+  }
+  
+  
+.ser-vice{
+  /* border: solid red 2px;*/
+   display: grid;          /*  Al utilizar el displat "grid" me permite ordenar de otras formas las class de los elementos del dom*/
+   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+   
+ }
+  
+}
+
+@media screen and (max-width: 480px){
+  .card1-container {
+    margin-left: 10%;
+    width: 280px;
+    height: 330px;
+    
+  }
+}
+
+
+
+.card1-container.flipped {
+  transform: rotateY(180deg);
+}
+
+.card1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: #040404;
+  transform: rotateY(0deg);
+  box-shadow: 0px 0px 60px rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+.front img{
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+  transition: all .6s ease;
+  border-radius: 3px;
+}
+
+.front :hover{
+  opacity: 1;
+  transition: all .5s ease;
+  box-shadow: 0px 0px 35px rgb(0, 0, 0);
+  
+}
+
+
+
+.back {
+  background-color: #1f1f1f ;
+  transform: rotateY(180deg);
+  box-shadow: 0px 0px 20px rgb(21, 21, 21);
+  border-radius: 5px;
+}
+
+
